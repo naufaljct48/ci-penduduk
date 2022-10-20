@@ -43,11 +43,10 @@ class Penduduk extends BaseController
                     'tahun'   => $this->request->getPost('tahun', FILTER_SANITIZE_STRING)
                 ];
                 $this->pendudukModel->save($data);
-                $respon = [
-                    'validasi' => true,
-                    'sukses' => true,
-                    'pesan' => 'Data berhasil ditambahkan :)'
-                ];
+                
+                $respon = "<div class=\"alert alert-dismissible alert-success\">
+                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button>
+                <strong>Sukses!</strong> Berhasil Input Data.</div>";
             }
             return $this->response->setJSON($respon);
         }
@@ -70,11 +69,9 @@ class Penduduk extends BaseController
                     'tahun'   => $this->request->getPost('tahun', FILTER_SANITIZE_STRING)
                 ];
                 $this->pendudukModel->save($data);
-                $respon = [
-                    'validasi' => true,
-                    'sukses' => true,
-                    'pesan' => 'Data berhasil diubah :)'
-                ];
+                $respon = "<div class=\"alert alert-dismissible alert-success\">
+                <button type=\"button\" class=\"btn-close\" data-bs-dismiss=\"alert\"></button>
+                <strong>Sukses!</strong> Berhasil Input Data.</div>";
             }
             return $this->response->setJSON($respon);
         }

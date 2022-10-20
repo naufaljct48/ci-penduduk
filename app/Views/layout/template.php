@@ -45,14 +45,6 @@
         </div>
       </div>
     </div>
-    <div class="preloader">
-        <div class="loading">
-            <div class="spinner-grow text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-    </div>
-    <div id="base-url" data-url="<?= base_url(); ?>"></div>
     
     <?= $this->renderSection('content'); ?>
 
